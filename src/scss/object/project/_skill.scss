@@ -1,0 +1,232 @@
+$itemsCount: 6; // Adjust if tabs number changes
+
+.p-skill {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  position: relative;
+
+  &__pie {
+    width: 200px;
+    height: 270px;
+    min-width: 200px;
+    margin: 0;
+    position: relative;
+    &::before {
+      content: 'この1年での使用頻度';
+      font-family: 'M PLUS 1p', sans-serif;
+      font-size: 20px;
+    }
+    &__chartRate {
+      font-size: 40px;
+      color: $black;
+      font-family: 'M PLUS 1p', sans-serif;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    }
+  }
+}
+
+// Tabs
+.tabs-controls {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 100px 0 50px;
+}
+
+.tabs-controls__link {
+  position: relative;
+  display: block;
+  padding: 16px 32px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #262626;
+  font-family: "Poppins", sans-serif;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: #262626;
+    border-radius: 2px;
+    margin: auto;
+    content: '';
+    transition: width 0.4s;
+  }
+}
+
+.tabs-controls__link--active {
+  &:after {
+    width: 100%;
+  }
+}
+
+// Cards
+.cards-container {
+  position: relative;
+  z-index: 1;
+  width: 800px;
+  height: calc(100vh - 205px);
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  position: absolute;
+  width: 700px;
+  height: 350px;
+  background-color: #fff;
+  border: 1px solid #262626;
+  box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 40px;
+  transition: transform 0.3s, opacity 0.2s;
+  display: flex;
+  justify-content: space-between;
+
+  &__ttl {
+    margin: 0 0 30px;
+    font-size: 53px;
+    color: #262626;
+    font-family: 'M PLUS 1p', sans-serif;
+    line-height: 50px;
+  }
+
+  &__txt {
+    font-size: 20px;
+    color: #262626;
+    font-family: 'M PLUS 1p', sans-serif;
+  }
+
+  &.hidden {
+    z-index: 100;
+    background-color: #fff;
+    color: #262626;
+    opacity: 0;
+    transition: color 0.5s, background-color 0.5s, transform 1s, opacity 0.2s 0.4s;
+
+    p {
+      color: #262626;
+      transition: color 0.5s;
+      opacity: 0.9;
+    }
+
+    @for $i from 1 through $itemsCount {
+      &:nth-of-type(#{$i}) {
+        transform: rotate(random(100) - 100 + deg) translateX((random(1) + 100) * 1%) translateY(random(60) * -1%) scale(random(10)*0.1) skewX(random(12) + deg) skewY(random(12) + deg);
+      }
+    }
+  }
+
+  @for $i from 1 through $itemsCount {
+    $zIndexStartValue: $itemsCount + 1; // we don't want an item with 0 index
+    $xValue: ($i - 1) * 10px; // we want to start translating from 0
+    $yValue: ($i - 1) * 10px; // we want to start translating from 0
+    $zIndexValue: $itemsCount - $i; // reverse the z-index, so first item is on top
+
+    &:nth-of-type(#{$i}) {
+      z-index: $zIndexValue;
+      transform: translateX(#{$xValue}) translateY(#{$yValue});
+    }
+  }
+}
+
+
+
+
+.chart--1 {
+	background:
+		radial-gradient(
+			circle closest-side,
+			#fff 0,
+			#fff 70%,
+			transparent 70%,
+			transparent 100%,
+      #fff 0
+		),
+		conic-gradient(
+			#8a2be2 100%,
+			#d3d3d3 0,
+			#d3d3d3 100%
+  );
+}
+
+.chart--2 {
+  background:
+  radial-gradient(
+    circle closest-side,
+    #fff 0,
+    #fff 70%,
+    transparent 70%,
+    transparent 100%,
+    #fff 0
+  ),
+  conic-gradient(
+    #8a2be2 90%,
+    #d3d3d3 0,
+    #d3d3d3 100%
+);
+}
+.chart--3 {
+  background:
+  radial-gradient(
+    circle closest-side,
+    #fff 0,
+    #fff 70%,
+    transparent 70%,
+    transparent 100%,
+    #fff 0
+  ),
+  conic-gradient(
+    #8a2be2 60%,
+    #d3d3d3 0,
+    #d3d3d3 100%
+);
+}
+.chart--4 {
+  background:
+  radial-gradient(
+    circle closest-side,
+    #fff 0,
+    #fff 70%,
+    transparent 70%,
+    transparent 100%,
+    #fff 0
+  ),
+  conic-gradient(
+    #8a2be2 30%,
+    #d3d3d3 0,
+    #d3d3d3 100%
+);
+}
+.chart--5 {
+  background:
+  radial-gradient(
+    circle closest-side,
+    #fff 0,
+    #fff 70%,
+    transparent 70%,
+    transparent 100%,
+    #fff 0
+  ),
+  conic-gradient(
+    #8a2be2 30%,
+    #d3d3d3 0,
+    #d3d3d3 100%
+);
+}

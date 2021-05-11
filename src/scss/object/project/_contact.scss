@@ -1,0 +1,89 @@
+.p-contact {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+
+  &__inner {
+    margin: 130px auto 0;
+    width: 900px;
+  }
+
+  &__img {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  &__txtWrap {
+    width: 40%;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-between;
+    font: {
+      size: 20px;
+      family: 'M PLUS 1p',sans-serif;
+    }
+  }
+
+  &__ttl{
+    width: 500px;
+    margin: 60px auto 0;
+    font: {
+      size: 70px;
+      weight: 700;
+      family: 'Josefin Sans', sans-serif;
+    }
+    text-align: center;
+    position: relative;
+    z-index: 888;
+    &::after {
+      content: 'お仕事依頼お待ちしております。';
+      font-family: 'M PLUS 1p', sans-serif;
+      font-size: 20px;
+      color: #262626;
+      white-space: pre;
+    }
+  }
+
+  &__github {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+}
+
+  .particletext {
+     &.confetti {
+        >.particle {
+           opacity:0;
+           position: absolute;
+           animation: confetti 3s ease-in infinite;
+           &.c1 {
+              background-color:rgba(76,175,80,0.8);
+           }
+           &.c2 {
+              background-color:rgba(156,39,176,0.8);
+           }
+        }
+     }
+  }
+
+
+@keyframes confetti {
+  0% {
+     opacity:0;
+     transform:translateY(0%) rotate(0deg);
+  }
+  10% {
+     opacity:1;
+  }
+  35% {
+     transform:translateY(-800%) rotate(270deg);
+  }
+  80% {
+     opacity:1;
+  }
+  100% {
+     opacity:0;
+     transform:translateY(2000%) rotate(1440deg);
+  }
+}

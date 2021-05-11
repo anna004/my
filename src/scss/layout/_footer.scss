@@ -1,0 +1,15 @@
+.l-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 5%;
+
+  &__txt {
+    padding-left: 3%;
+    font: {
+      size: 42px;
+      weight: 500;
+      family:  'Josefin Sans', sans-serif;
+    }
+    z-index: 999;
+  }
+}

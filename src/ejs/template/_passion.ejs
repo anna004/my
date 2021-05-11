@@ -1,0 +1,50 @@
+<section class="p-passion">
+  <div class="p-passion__inner">
+    <!--タイトルの文字回転-->
+        <div class="p-passion__txtRolling">
+          <p class="p-passion__txtRolling__ttl">4D</p>
+          <% var array = [
+            {word: "aring!", JP:"大胆に"},
+            {word: "ynamic!", JP:"ダイナミックに"},
+            {word: "rastic!", JP:"徹底的に"},
+            {word: "ericate!", JP:"繊細に"},
+          ]; %>
+          <ul class="p-passion__txtRolling__wrap">
+            <% array.forEach(function(value){ %>
+            <li class="p-passion__txtRolling__list">
+              <p class="c-ttl"><%= value.word %></p>
+              <p class="p-passion__txtRolling__txt"><%= value.JP %></p>
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+    <!-- 文字回転 end -->
+      <p class="p-passion__ttlDetail">この４D「Daring:大胆に、Dynamic:ダイナミックに、Drastic:徹底的に、Delicate:繊細に」をモットーに掲げ、<br>デザインに、コードに、真摯に向き合います。
+      </p>
+
+    <div>
+      <% var array = [
+        {icon: "naruto.png", JPttl:"大胆に", detail:"既存の枠にとらわれず、思い切りよく新しいことへ挑戦します。"},
+        {icon: "mobile-suit-gundam.png", JPttl:"ダイナミックに", detail:"課題や提案に柔軟に対応し、能動的かつエネルギッシュに活動しています。"},
+        {icon: "ninja-head.png", JPttl:"徹底的に", detail:"1pxにもこだわり、100%納得のいく物作りをするための努力をしています。"},
+        {icon: "sailor-moon.png", JPttl:"繊細に", detail:"対人・対Webに思いやりを持って、デザイン・コーディングをします。"},
+      ]; %>
+
+        <ul class="p-passion__descriptionWrap c-fadein">
+          <% array.forEach(function(value){ %>
+          <li class="p-passion__descriptionWrap__list">
+            <img src="https://img.icons8.com/ios-filled/250/000000/<%= value.icon %>" class="p-passion__descriptionWrap__icon"/>
+            <p class="p-passion__descriptionWrap__ttl"><%= value.JPttl %></p>
+            <p class="p-passion__descriptionWrap__txt"><%= value.detail %></p>
+          </li>
+          <% }); %>
+        </ul>
+    </div>
+
+    <div class="c-parts">02 &emsp;
+      <h2 class="c-parts__ttl">Passion</h2>
+    </div>
+
+
+  </div> <!--inner-->
+</section>

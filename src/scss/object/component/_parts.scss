@@ -1,0 +1,16 @@
+.c-parts {
+  color: $purple;
+  font: {
+    size: 35px;
+    family: 'Josefin Sans', sans-serif;
+  }
+  position: absolute;
+  top: 20%;
+  right: 1%;
+
+  &__ttl {
+    margin-top: 30px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+  }
+}

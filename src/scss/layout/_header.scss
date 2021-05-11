@@ -1,0 +1,20 @@
+.l-header {
+  display: flex;
+  position: fixed;
+  top: 5%;
+  width: 100%;
+  justify-content: space-between;
+
+  &__txt {
+    font: {
+      size: 20px;
+      family: "Poppins", sans-serif;
+    }
+    &:first-child {
+      padding-left: 3%;
+    }
+    &:last-child {
+      padding-right: 3%;
+    }
+  }
+}

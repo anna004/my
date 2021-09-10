@@ -62,9 +62,7 @@
           <p class="p-me__txt">1994年、愛知県生まれ。新卒で航空会社へ入社し、12カ国を旅行しました。<br>旅の中でノマドに憧れ、IT業界へ転身。デザイン・コーディングにおいて多岐に渡り活躍のできる、Webエンジニアを目指します。</p>
         </div>
       </div>
-      <div class="c-parts">01 &emsp;
-        <h2 class="c-parts__ttl">About me</h2>
-      </div>
+      <div class="c-parts">01 &emsp;<h2 class="c-parts__ttl">About me</h2></div>
     </section>
 
     <section class="p-passion">
@@ -95,7 +93,6 @@
             <p class="p-passion__ttlDetail">この４D「Daring:大胆に、Dynamic:ダイナミックに、Drastic:徹底的に、Delicate:繊細に」をモットーに掲げ、<br>デザインに、コードに、真摯に向き合います。</p>
             <div> 
                 <ul class="p-passion__descriptionWrap c-fadein">
-
                     <li class="p-passion__descriptionWrap__list">
                         <img src="https://img.icons8.com/ios-filled/250/000000/naruto.png" class="p-passion__descriptionWrap__icon"/>
                         <p class="p-passion__descriptionWrap__ttl">大胆に</p>
@@ -118,9 +115,7 @@
                    </li>
                 </ul>
             </div>
-            <div class="c-parts">02 &emsp;
-              <h2 class="c-parts__ttl">Passion</h2>
-            </div>
+            <div class="c-parts">02 &emsp;<h2 class="c-parts__ttl">Passion</h2></div>
         </div> <!--inner-->
     </section>
   
@@ -181,9 +176,7 @@
                 <figure class="p-skill__pie chart--5"><div class="p-skill__pie__chartRate">30%</div></figure>
             </div>
         </div>
-        <div class="c-parts">03 &emsp;
-            <h2 class="c-parts__ttl">Skill set</h2>
-        </div>
+        <div class="c-parts">03 &emsp;<h2 class="c-parts__ttl">Skill set</h2></div>
     </section>
 
     <section class="p-contact" id="contact">
@@ -200,9 +193,7 @@
                     <li>anna.kitamura004@gmail.com</li>
                 </ul>
             </div>
-            <div class="c-parts">04 &emsp;
-                <h2 class="c-parts__ttl">Contact</h2>
-            </div>
+            <div class="c-parts">04 &emsp;<h2 class="c-parts__ttl">Contact</h2></div>
         </div> <!-- contact__inner end-->
     </section>
 </main>
@@ -258,14 +249,14 @@ initparticles();
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js"></script>
 <script>
 $(function(){
-    $(window).scroll(function (){ //すクロールしたら実行します
-      var scroll = $(window).scrollTop(); //現状のスクロール位置を取得
-      var windowHeight = $(window).height(); //ブラウザの高さを取得 624
+    $(window).scroll(function (){
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
       // console.log(scrollin)
 
-        $('.c-fadein').each(function(){ //fadeinクラスを持ってるもの全てをチェックします
-            var elemPos = $(this).offset().top; //一個一個の要素の位置を取得して //1023
-            if (scroll > elemPos - windowHeight){ //
+        $('.c-fadein').each(function(){
+            var elemPos = $(this).offset().top;
+            if (scroll > elemPos - windowHeight){
                 $(this).addClass('scrollin');
             }
         });
